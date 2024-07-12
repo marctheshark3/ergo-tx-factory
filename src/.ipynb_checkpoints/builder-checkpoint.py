@@ -1,12 +1,13 @@
 from src.find_miner_id import ReadTokens
+import pandas as pd
 
 class ConvertTokens:
     def __init__(self):
         self.reader = ReadTokens()
         
     def get_miner_id(self, wallet):
-        token = reader.get_latest_miner_id(wallet)
-        miner_id = reader.get_token_description(token['tokenId'])
+        token = self.reader.get_latest_miner_id(wallet)
+        miner_id = self.reader.get_token_description(token['tokenId'])
         return miner_id
 
     def get_token_conversions(self, wallet, miner_id):
@@ -36,11 +37,21 @@ class ConvertTokens:
                 conversions[token] = token_conversion * ergs_to_swap
             except KeyError:
                 print('The TOKEN {} ISNT SUPPORTED on SPECTRUM'.format(token))
-            
-        
         return conversions
 
     def execute(self, wallet):
         miner_id = self.get_miner_id(wallet)
         price_conversion = self.get_token_conversions(wallet, miner_id)
         return self.create_conversion(miner_id, price_conversion)
+
+    def build(self, wallet):
+        df = pd.read_csv('https://raw.githubusercontent.com/marctheshark3/Mining-Reward-Tokens/main/supported-tokens.csv')
+        results = self.execute(wallet)
+        tx_data = []
+        for key in results.keys():
+            value = results[key]
+            temp_df = df[df['Token Name'] == key]
+            data = {'tokenId': temp_df['Token ID'].values[0], 'amount': '{}'.format(value)}
+            tx_data.append(data)
+        
+        return tx_data
