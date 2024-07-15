@@ -1,0 +1,17 @@
+# Ignore environment variable files
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore files ending with _TX.txt
+*_TX.txt
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
