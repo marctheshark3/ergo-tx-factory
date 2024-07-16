@@ -11,7 +11,10 @@ class ConvertTokens:
         
     def get_miner_id(self, wallet):
         token = self.reader.get_latest_miner_id(wallet)
-        miner_id = self.reader.get_token_description(token['tokenId'])
+        try:
+            miner_id = self.reader.get_token_description(token['tokenId'])
+        except TypeError:
+            return None
 
         # print('MINER ID: {}'.format(miner_id))
         return miner_id

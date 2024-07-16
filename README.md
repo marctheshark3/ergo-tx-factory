@@ -31,3 +31,9 @@ Run the script from the command line with the required arguments:
 ```bash
 python token_swap.py --my_wallet <my_wallet_address> --miner_wallet <miner_wallet_address>
 ```
+
+This command returns None if there is not miner ID otherwise it will return the miners minimum payout
+```bash
+python confirm_miner_ID.py --miner_wallet <miner_wallet_address>
+```
+

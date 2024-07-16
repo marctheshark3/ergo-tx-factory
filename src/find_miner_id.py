@@ -32,6 +32,7 @@ class ReadTokens:
             # Handle any exceptions that occur during the request
             print(f"An error occurred: {e}")
             return None
+            
     def get_wallet_balance(self, wallet):
         url = 'http://213.239.193.208:9053/blockchain/balance'
         headers = {
