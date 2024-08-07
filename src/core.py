@@ -14,14 +14,14 @@ class SigsCore:
     def check_for_payments(self):
         # read in balance df
         data = [{'miner': '9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn',
-                 'min_payout': 1,'balance': 10},]
-                # {'miner': '9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE',
-                #  'min_payout': 1, 'balance': 2},
-                # {'miner': '9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W',
-                #  'min_payout': 1.5,'balance': 2.2}]
+                 'min_payout': 1,'balance': 10},
+                {'miner': '9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE',
+                 'min_payout': 0.01, 'balance': 0.1},
+                {'miner': '9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W',
+                 'min_payout': 1.5,'balance': 0.2}]
 
         df = pd.DataFrame(data)
-        df['send_payment'] = (df['balance'] > df['min_payout']).astype(int)
+        df['send_payment'] = (df['balance'] >= df['min_payout']).astype(int)
         send_df = df[df['send_payment'] == 1]
                 
         return send_df

@@ -10,7 +10,7 @@ def main(miner_wallet):
         return miner_id['minimumPayout']
 
     print('MINER DID NOT HAVE MINER ID')
-    return miner_id
+    return None
     
 
 if __name__ == "__main__":
