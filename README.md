@@ -1,5 +1,8 @@
-# Token Swap Transaction Builder
-This code was built primarily for the following use case: A miner of the Sigmanauts Mining Pool has a mining reward ready for redemption. This miner also has the Miner ID we are looking for in their wallet with various parameters set. Using these parameters and the mining reward, a TX is built and sent to this miner from the mining pools wallet containing the set of erg and native tokens which is derived from NFT Miner ID.
+# Sigmanauts Mining Core - Payment Mechanism
+This code base performs the needed execute of payments to miners when balances are over the minimum payout threshold. Additionally, this code supports the swapping of native tokens from the pool's wallet to the miners wallet based on spectrum prices as well as looking for changes in minimum payouts. 
+
+One can look at the token swap as "a dollar cost averaging" approach into Ergo's Native Tokens of choice. 
+
 
 ## Prerequisites
 
@@ -21,16 +24,5 @@ This code was built primarily for the following use case: A miner of the Sigmana
 
 ## Usage
 
-### Using the CLI
-
-Run the script from the command line with the required arguments:
-
-```bash
-python token_swap.py --my_wallet <my_wallet_address> --miner_wallet <miner_wallet_address>
-```
-
-This command returns None if there is not miner ID otherwise it will return the miners minimum payout
-```bash
-python confirm_miner_ID.py --miner_wallet <miner_wallet_address>
-```
+TBD
 
