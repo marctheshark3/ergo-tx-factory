@@ -14,7 +14,7 @@ class SigsCore:
     def check_for_payments(self):
         # read in balance df
         data = [{'miner': '9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn',
-                 'min_payout': 1,'balance': 1},]
+                 'min_payout': 1,'balance': 10},]
                 # {'miner': '9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE',
                 #  'min_payout': 1, 'balance': 2},
                 # {'miner': '9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W',
@@ -33,6 +33,7 @@ class SigsCore:
             temp = {}
             address = row['miner']
             payout = row['balance']
+            
             token_data, ergo_data, results = self.builder.build_and_send(address, payout, debug=debug)
             
             token_data.append(ergo_data)
@@ -66,9 +67,7 @@ class SigsCore:
         payments = self.check_for_payments()
         if not payments.empty:
             data = self.send_payments(payments, debug)
-            
             df = self.update_data(data)
-        
         return df
             
 

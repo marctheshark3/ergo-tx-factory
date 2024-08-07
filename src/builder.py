@@ -86,8 +86,13 @@ class BuildTokenSwapTX:
     def send_erg(self, ergo, rx, amount):
         receiver_addresses = [rx]
         amount = [amount]
-        tx = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=self.seed_phrase,
-                                              receiver_addresses=receiver_addresses, fee=self.miner_fee)
+        try:
+            tx = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=self.seed_phrase,
+                                                  receiver_addresses=receiver_addresses, fee=self.miner_fee)
+        except Exception as e:
+            print(e, 'WE LIKELY RAN OUT OF TOKENS OR ERG!!!!')
+            tx = 'NOT ENOUGH LIQUIDITY'
+            
         return tx
 
     def send_tokens(self, ergo, ergo_data, token_data, rx):
@@ -105,10 +110,17 @@ class BuildTokenSwapTX:
         
         print(tokens, amount_tokens, amount, 'DATA VERIFICATION', token_data)
 
+        try:
+            
      
-        tx = helper_functions.send_token(ergo=ergo, amount=amount, amount_tokens=amount_tokens, fee=self.miner_fee,
-                              receiver_addresses=receiver_addresses, tokens=tokens,
-                              wallet_mnemonic=self.seed_phrase)
+            tx = helper_functions.send_token(ergo=ergo, amount=amount, amount_tokens=amount_tokens, fee=self.miner_fee,
+                                  receiver_addresses=receiver_addresses, tokens=tokens,
+                                  wallet_mnemonic=self.seed_phrase)
+        except Exception as e:
+            print(e, 'WE LIKELY RAN OUT OF TOKENS OR ERG!!!!')
+            tx = 'NOT ENOUGH LIQUIDITY'
+
+        
         return tx
         
 
@@ -134,7 +146,14 @@ class BuildTokenSwapTX:
                                    
             else:
                 tx = self.send_tokens(ergo, ergo_data, token_data, miner_wallet)
+
             results['tx'] = str(tx)
+
+            if tx == 'NOT ENOUGH LIQUIDITY':
+                
+                return token_data, ergo_data, results
+                
+            
             print('submited TX: {}'.format(tx))
             file = '{}_TX.txt'.format(miner_wallet)
             with open(file, 'w') as f:
