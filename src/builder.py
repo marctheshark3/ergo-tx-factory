@@ -40,7 +40,6 @@ class BuildTokenSwapTX:
 
         token_data = []
         ergo_data = []
-        print('results', results)
         for key in results.keys():
             
             value = results[key]
@@ -50,7 +49,7 @@ class BuildTokenSwapTX:
                 ergo_data = data
                 continue
             token_data.append(data)
-        return token_data, ergo_data
+        return token_data, ergo_data, results
 
     def wait_for_tx_to_clear(self, tx):
         # this code should hold up any further TXs to be sent until the current one is cleared.
@@ -58,7 +57,6 @@ class BuildTokenSwapTX:
         tx_api = '{}/{}'.format(api, tx)
         done = False
         while True:
-            
             
             print('Checking for confirmation of tx: {}'.format(tx))
             try:
@@ -93,7 +91,6 @@ class BuildTokenSwapTX:
         return tx
 
     def send_tokens(self, ergo, ergo_data, token_data, rx):
-        print(ergo_data, token_data, rx)
         tokens = [[token['tokenId']] for token in token_data] # how does this look if we have no tokens?
         amount_tokens = [[token['amount']] for token in token_data]
         receiver_addresses = [rx for _ in range(len(tokens))]
@@ -115,36 +112,39 @@ class BuildTokenSwapTX:
         return tx
         
 
-    def build_and_send(self, miner_wallet, payout):
+    def build_and_send(self, miner_wallet, payout, debug=True):
         # self.wait_for_tx_to_clear(my_wallet)
-        miner_fee = 0.0012 
+        miner_fee = 0.0012 # faster fee 
         only_ergo = False
         node_url: str = "http://213.239.193.208:9053/"
         ergo = appkit.ErgoAppKit(node_url=node_url)
         
         wallet_address = helper_functions.get_wallet_address(ergo=ergo, amount=1, wallet_mnemonic=self.seed_phrase)[0]
 
-        # lets assume for now we are always sending tokens
-        print('gathering tokens')
-        token_data, ergo_data = self.get_token_data(miner_wallet, payout)
-        print('got the tokens')
-        if not token_data:
-            tx = self.send_erg(ergo, miner_wallet, ergo_data['amount'])
-                               
+        token_data, ergo_data, results = self.get_token_data(miner_wallet, payout)
+        results['miner'] = miner_wallet
+        results['erg_balance_paid'] = payout
+        if debug:
+            results['tx'] = 'debugging'
+            return token_data, ergo_data, results
+            
         else:
-            tx = self.send_tokens(ergo, ergo_data, token_data, miner_wallet)
-                
-        print('submited TX: {}'.format(tx))
-        file = '{}_TX.txt'.format(miner_wallet)
-        with open(file, 'w') as f:
-            with redirect_stdout(f):
-                print(tx)
-                
-        self.wait_for_tx_to_clear(tx)
-        
-
-        return
-
+            if not token_data:
+                tx = self.send_erg(ergo, miner_wallet, ergo_data['amount'])
+                                   
+            else:
+                tx = self.send_tokens(ergo, ergo_data, token_data, miner_wallet)
+            results['tx'] = str(tx)
+            print('submited TX: {}'.format(tx))
+            file = '{}_TX.txt'.format(miner_wallet)
+            with open(file, 'w') as f:
+                with redirect_stdout(f):
+                    print(tx)
+            
+            self.wait_for_tx_to_clear(tx)
+            
+            return token_data, ergo_data, results
+ 
 
         
                 

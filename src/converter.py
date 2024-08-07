@@ -21,7 +21,6 @@ class ConvertTokens:
 
     def get_token_conversions(self, wallet, miner_id):
         spectrum_price_data = self.reader.get_api_data('https://api.spectrum.fi/v1/price-tracking/markets')
-        print('trying conversion')
         tokens_to_swap = [item['token'] for item in miner_id['tokens']]
         my_spectrum_data = []
         swap = {}
@@ -31,16 +30,13 @@ class ConvertTokens:
                 swap[token] = data['lastPrice']
             if 'ERGO' in tokens_to_swap:
                 swap['ERGO'] = 1
-        print('done')
+                
         return swap
 
     def create_conversion(self, miner_id, price_conversion, payout):
         conversions = {}        
         for item in miner_id['tokens']:  
-            print(item)
-            print('getting token')
             token = item['token']
-            print('got it')
             ratio = item['value']
             ergs_to_swap = payout * ratio / 100
             try:
@@ -58,7 +54,7 @@ class ConvertTokens:
             price_conversion = self.get_token_conversions(wallet, miner_id)
             return self.create_conversion(miner_id, price_conversion, payout)
         else:
-            return {'ERGO': p}
+            return {'ERGO': payout}
                         
 
         
