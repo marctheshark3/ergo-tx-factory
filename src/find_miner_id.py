@@ -56,51 +56,40 @@ class ReadTokens:
         return ls
 
     def get_latest_miner_id(self, wallet):
-        possible_tokens = self.find_token_name_in_wallet(wallet, 'Sigmanaut Mining Pool Miner ID - Season 0')
 
-        my_tokens = []
-        miner_id = None
+        possible_tokens = self.find_token_name_in_wallet(wallet, 'Sigmanaut Mining Pool Miner ID - Season 0')
         for token in possible_tokens:
+            token['height'] = self.get_token_description(token['tokenId'])['height']
+        sorted_data = sorted(possible_tokens, key=lambda x: x['height'], reverse=True)
+        ls = []
+        for data in sorted_data:
             
-            id = token['tokenId']
+            id = data['tokenId']
+            height = data['height']
             base_url = 'https://api.ergoplatform.com/api/v1/boxes/byTokenId'
             url = '{}/{}'.format(base_url, id)
-            data = self.get_api_data(url)
-            oldest_height = 1e30
-            # for a given token we want to find the earliest TX with it so we can see who minted it
-            for item in data['items']:
-                if oldest_height > item['creationHeight']:
-                    oldest_height = item['creationHeight']
-                    # ls = item['boxId'], item['creationHeight'], item['transactionId'], item['address']
-                    tx = item['transactionId']
+            api_data = self.get_api_data(url)
+            ls.append(api_data)
+            tx = None
             
-            # tx = ls[2]
-            wallet_minted_tokens = []
-            url = 'https://api.ergoplatform.com/api/v1/transactions'
-            tx_url = '{}/{}'.format(url, tx)
-            data = self.get_api_data(tx_url)
-            # print(data)
-            box_id_first_input = data['inputs'][0]['boxId']
-        
-            outputs = data['outputs']
-            # print(outputs, 'oi')
-            earliest_height = 0
-            for sample in outputs:
-                try:   
-                    assets = sample['assets'][0]
-                    if assets['tokenId'] == box_id_first_input:
-                        minting_address = sample['address']
-                        if wallet == minting_address:
-                            if sample['creationHeight'] > earliest_height:
-                                oldest_height = sample['creationHeight']
-                                my_tokens.append(token)
-                                miner_id = token
-                            break
-                except IndexError:
-                    pass
-        return miner_id
+            for data in api_data['items']:
+                if height == data['creationHeight']:
+                    tx = data['transactionId']
+                    print(height, tx, id)
+                    break
+            # we now have the TX which created the NFT
+            if tx:
+                wallet_minted_tokens = []
+                url = 'https://api.ergoplatform.com/api/v1/transactions'
+                tx_url = '{}/{}'.format(url, tx)
+                tx_data = self.get_api_data(tx_url)
+                # print(data)
+                box_id_first_input = tx_data['inputs'][0]['boxId']
+                if box_id_first_input == id:
+                    return id
                                     
     def get_token_description(self, id):
+        # print(id, 'id')
         url = '{}/{}'.format(self.token_ls, id)
         data = self.get_api_data(url)
 

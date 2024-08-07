@@ -4,7 +4,7 @@ from src.builder import BuildTokenSwapTX
 def main(my_wallet, miner_wallet):
     builder = BuildTokenSwapTX()
     try:
-        builder.build_and_send(my_wallet, miner_wallet)
+        builder.build_and_send(my_wallet, miner_wallet, payout=5)
     except Exception as e:
         print(e)
 
