@@ -122,3 +122,11 @@ class PostgresDB:
         cur.close()
         conn.close()
         return column_names
+
+    def execute_query(self, query):
+        conn = self.connect()
+        cur = conn.cursor()
+        cur.execute(query)
+        conn.commit()
+        cur.close()
+        conn.close()

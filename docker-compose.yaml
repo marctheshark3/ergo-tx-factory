@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: SIGS-CORE
+      POSTGRES_USER: sigs_user
+      POSTGRES_PASSWORD: sigs_password
+      SWAP_MNEMONIC: ''
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    environment:
+      DB_NAME: SIGS-CORE
+      DB_USER: sigs_user
+      DB_PASSWORD: sigs_password
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+
+volumes:
+  postgres_data:

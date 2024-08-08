@@ -1,2 +1,4 @@
 python-dotenv
 ergpy
+psycopg2-binary
+Flask

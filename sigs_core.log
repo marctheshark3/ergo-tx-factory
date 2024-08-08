@@ -1,0 +1,120 @@
+2024-08-08 09:16:51,339 - src.core - INFO - Starting payment execution
+2024-08-08 09:16:51,339 - src.core - INFO - Updating minimum payment
+2024-08-08 09:16:51,351 - src.core - INFO - Found 3 payments to process
+2024-08-08 09:16:51,352 - src.core - INFO - Sending payment of 3.9421 to 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn
+2024-08-08 09:16:51,352 - src.builder - INFO - Debug mode: True
+2024-08-08 09:16:51,352 - src.builder - INFO - <class 'str'>, <class 'float'>
+2024-08-08 09:16:51,352 - src.builder - INFO - Building and sending transaction for miner: 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn, payout: 3.9421
+2024-08-08 09:16:52,817 - src.builder - INFO - Getting token data for miner wallet: 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn, payout: 3.9421
+2024-08-08 09:16:57,559 - src.builder - INFO - Token data retrieved: [{'tokenId': 'b0b312cde931c8bbdac0dac5bfd8e2c03bf4611275dc967988c8d15bd5ec20e0', 'amount': 3.07089826526, 'token': 'Bober'}, {'tokenId': '8b08cdd5449a9592a9e79711d7d79249d7a03c535d17efaee83e216e80a44c4b', 'amount': 10.2903671717, 'token': 'RSN'}], Ergo data: {'tokenId': '1', 'amount': 2.36526, 'token': 'ERGO'}
+2024-08-08 09:16:57,559 - src.builder - INFO - Debug mode: Simulating transaction
+2024-08-08 09:16:57,560 - src.core - INFO - Sending payment of 4.2783 to 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W
+2024-08-08 09:16:57,560 - src.builder - INFO - Debug mode: True
+2024-08-08 09:16:57,560 - src.builder - INFO - <class 'str'>, <class 'float'>
+2024-08-08 09:16:57,560 - src.builder - INFO - Building and sending transaction for miner: 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W, payout: 4.2783
+2024-08-08 09:16:58,483 - src.builder - INFO - Getting token data for miner wallet: 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W, payout: 4.2783
+2024-08-08 09:17:02,270 - src.builder - INFO - Token data retrieved: [], Ergo data: {'tokenId': '1', 'amount': 4.2783, 'token': 'ERGO'}
+2024-08-08 09:17:02,270 - src.builder - INFO - Debug mode: Simulating transaction
+2024-08-08 09:17:02,270 - src.core - INFO - Sending payment of 3.8489 to 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:17:02,270 - src.builder - INFO - Debug mode: True
+2024-08-08 09:17:02,270 - src.builder - INFO - <class 'str'>, <class 'float'>
+2024-08-08 09:17:02,270 - src.builder - INFO - Building and sending transaction for miner: 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk, payout: 3.8489
+2024-08-08 09:17:03,167 - src.builder - INFO - Getting token data for miner wallet: 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk, payout: 3.8489
+2024-08-08 09:17:06,921 - src.builder - INFO - Token data retrieved: [{'tokenId': '0cd8c9f416e5b1ca9f986a7f10a84191dfb85941619e49e53c0dc30ebf83324b', 'amount': 419.5300634354499, 'token': 'COMET'}, {'tokenId': '03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04', 'amount': 0.76862533, 'token': 'SigUSD'}, {'tokenId': '8b08cdd5449a9592a9e79711d7d79249d7a03c535d17efaee83e216e80a44c4b', 'amount': 10.047080035299999, 'token': 'RSN'}, {'tokenId': '7a51950e5f548549ec1aa63ffdc38279505b11e7e803d01bcf8347e0123c88b0', 'amount': 6.158239999999999e-06, 'token': 'rsBTC'}], Ergo data: {'tokenId': '1', 'amount': 1.92445, 'token': 'ERGO'}
+2024-08-08 09:17:06,922 - src.builder - INFO - Debug mode: Simulating transaction
+2024-08-08 09:17:06,923 - src.core - INFO - Updating data
+2024-08-08 09:17:06,934 - src.core - INFO - Inserted payment record for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn
+2024-08-08 09:17:06,942 - src.core - INFO - Updated balance for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn to 0
+2024-08-08 09:17:06,951 - src.core - INFO - Inserted payment record for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn
+2024-08-08 09:17:06,960 - src.core - INFO - Updated balance for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn to 0
+2024-08-08 09:17:06,968 - src.core - INFO - Inserted payment record for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn
+2024-08-08 09:17:06,976 - src.core - INFO - Updated balance for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn to 0
+2024-08-08 09:17:06,976 - src.core - WARNING - NaN amount detected for asset COMET to miner 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn. Skipping this record.
+2024-08-08 09:17:06,976 - src.core - WARNING - NaN amount detected for asset SigUSD to miner 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn. Skipping this record.
+2024-08-08 09:17:06,976 - src.core - WARNING - NaN amount detected for asset rsBTC to miner 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn. Skipping this record.
+2024-08-08 09:17:06,976 - src.core - WARNING - NaN amount detected for asset Bober to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:17:06,976 - src.core - WARNING - NaN amount detected for asset RSN to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:17:06,985 - src.core - INFO - Inserted payment record for 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W
+2024-08-08 09:17:06,993 - src.core - INFO - Updated balance for 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W to 0
+2024-08-08 09:17:06,994 - src.core - WARNING - NaN amount detected for asset COMET to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:17:06,994 - src.core - WARNING - NaN amount detected for asset SigUSD to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:17:06,994 - src.core - WARNING - NaN amount detected for asset rsBTC to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:17:06,994 - src.core - WARNING - NaN amount detected for asset Bober to miner 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk. Skipping this record.
+2024-08-08 09:17:07,002 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:17:07,009 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:17:07,017 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:17:07,025 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:17:07,033 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:17:07,040 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:17:07,048 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:17:07,056 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:17:07,064 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:17:07,072 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:17:07,073 - src.core - INFO - Payment execution completed successfully
+2024-08-08 09:24:32,199 - src.core - INFO - Starting payment execution
+2024-08-08 09:24:32,199 - src.core - INFO - Updating minimum payment
+2024-08-08 09:24:32,210 - src.core - INFO - Found 4 payments to process
+2024-08-08 09:24:32,210 - src.core - INFO - Sending payment of 2.463 to 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn
+2024-08-08 09:24:32,210 - src.builder - INFO - Debug mode: True
+2024-08-08 09:24:32,210 - src.builder - INFO - <class 'str'>, <class 'float'>
+2024-08-08 09:24:32,210 - src.builder - INFO - Building and sending transaction for miner: 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn, payout: 2.463
+2024-08-08 09:24:33,644 - src.builder - INFO - Getting token data for miner wallet: 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn, payout: 2.463
+2024-08-08 09:24:38,619 - src.builder - INFO - Token data retrieved: [{'tokenId': 'b0b312cde931c8bbdac0dac5bfd8e2c03bf4611275dc967988c8d15bd5ec20e0', 'amount': 1.9186784778000001, 'token': 'Bober'}, {'tokenId': '8b08cdd5449a9592a9e79711d7d79249d7a03c535d17efaee83e216e80a44c4b', 'amount': 6.429358551000001, 'token': 'RSN'}], Ergo data: {'tokenId': '1', 'amount': 1.4778, 'token': 'ERGO'}
+2024-08-08 09:24:38,619 - src.builder - INFO - Debug mode: Simulating transaction
+2024-08-08 09:24:38,619 - src.core - INFO - Sending payment of 1.9687 to 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE
+2024-08-08 09:24:38,620 - src.builder - INFO - Debug mode: True
+2024-08-08 09:24:38,620 - src.builder - INFO - <class 'str'>, <class 'float'>
+2024-08-08 09:24:38,620 - src.builder - INFO - Building and sending transaction for miner: 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE, payout: 1.9687
+2024-08-08 09:24:39,690 - src.builder - INFO - Getting token data for miner wallet: 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE, payout: 1.9687
+2024-08-08 09:24:40,548 - src.builder - INFO - Token data retrieved: [], Ergo data: {'tokenId': '1', 'amount': 1.9687, 'token': 'ERGO'}
+2024-08-08 09:24:40,548 - src.builder - INFO - Debug mode: Simulating transaction
+2024-08-08 09:24:40,548 - src.core - INFO - Sending payment of 4.2332 to 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W
+2024-08-08 09:24:40,548 - src.builder - INFO - Debug mode: True
+2024-08-08 09:24:40,548 - src.builder - INFO - <class 'str'>, <class 'float'>
+2024-08-08 09:24:40,548 - src.builder - INFO - Building and sending transaction for miner: 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W, payout: 4.2332
+2024-08-08 09:24:41,423 - src.builder - INFO - Getting token data for miner wallet: 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W, payout: 4.2332
+2024-08-08 09:24:45,100 - src.builder - INFO - Token data retrieved: [], Ergo data: {'tokenId': '1', 'amount': 4.2332, 'token': 'ERGO'}
+2024-08-08 09:24:45,100 - src.builder - INFO - Debug mode: Simulating transaction
+2024-08-08 09:24:45,100 - src.core - INFO - Sending payment of 3.5474 to 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:24:45,100 - src.builder - INFO - Debug mode: True
+2024-08-08 09:24:45,100 - src.builder - INFO - <class 'str'>, <class 'float'>
+2024-08-08 09:24:45,100 - src.builder - INFO - Building and sending transaction for miner: 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk, payout: 3.5474
+2024-08-08 09:24:46,130 - src.builder - INFO - Getting token data for miner wallet: 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk, payout: 3.5474
+2024-08-08 09:24:50,423 - src.builder - INFO - Token data retrieved: [{'tokenId': '0cd8c9f416e5b1ca9f986a7f10a84191dfb85941619e49e53c0dc30ebf83324b', 'amount': 386.66656629970004, 'token': 'COMET'}, {'tokenId': '03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04', 'amount': 0.7084157800000002, 'token': 'SigUSD'}, {'tokenId': '8b08cdd5449a9592a9e79711d7d79249d7a03c535d17efaee83e216e80a44c4b', 'amount': 9.260051369800001, 'token': 'RSN'}, {'tokenId': '7a51950e5f548549ec1aa63ffdc38279505b11e7e803d01bcf8347e0123c88b0', 'amount': 5.675840000000001e-06, 'token': 'rsBTC'}], Ergo data: {'tokenId': '1', 'amount': 1.7737, 'token': 'ERGO'}
+2024-08-08 09:24:50,423 - src.builder - INFO - Debug mode: Simulating transaction
+2024-08-08 09:24:50,425 - src.core - INFO - Updating data
+2024-08-08 09:24:50,437 - src.core - INFO - Inserted payment record for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn
+2024-08-08 09:24:50,445 - src.core - INFO - Updated balance for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn to 0
+2024-08-08 09:24:50,453 - src.core - INFO - Inserted payment record for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn
+2024-08-08 09:24:50,460 - src.core - INFO - Updated balance for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn to 0
+2024-08-08 09:24:50,468 - src.core - INFO - Inserted payment record for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn
+2024-08-08 09:24:50,475 - src.core - INFO - Updated balance for 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn to 0
+2024-08-08 09:24:50,475 - src.core - WARNING - NaN amount detected for asset COMET to miner 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn. Skipping this record.
+2024-08-08 09:24:50,475 - src.core - WARNING - NaN amount detected for asset SigUSD to miner 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn. Skipping this record.
+2024-08-08 09:24:50,475 - src.core - WARNING - NaN amount detected for asset rsBTC to miner 9eg7v2nkypUZbdyvSKSD9kg8FNwrEdTrfC2xdXWXmEpDAFEtYEn. Skipping this record.
+2024-08-08 09:24:50,475 - src.core - WARNING - NaN amount detected for asset Bober to miner 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE. Skipping this record.
+2024-08-08 09:24:50,475 - src.core - WARNING - NaN amount detected for asset RSN to miner 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE. Skipping this record.
+2024-08-08 09:24:50,483 - src.core - INFO - Inserted payment record for 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE
+2024-08-08 09:24:50,490 - src.core - INFO - Updated balance for 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE to 0
+2024-08-08 09:24:50,490 - src.core - WARNING - NaN amount detected for asset COMET to miner 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE. Skipping this record.
+2024-08-08 09:24:50,490 - src.core - WARNING - NaN amount detected for asset SigUSD to miner 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE. Skipping this record.
+2024-08-08 09:24:50,490 - src.core - WARNING - NaN amount detected for asset rsBTC to miner 9fj3mV8aF27jZBBH5HBdecVcD5hoUcqqcMmo1j8aUbCA1rceGLE. Skipping this record.
+2024-08-08 09:24:50,490 - src.core - WARNING - NaN amount detected for asset Bober to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:24:50,490 - src.core - WARNING - NaN amount detected for asset RSN to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:24:50,497 - src.core - INFO - Inserted payment record for 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W
+2024-08-08 09:24:50,504 - src.core - INFO - Updated balance for 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W to 0
+2024-08-08 09:24:50,504 - src.core - WARNING - NaN amount detected for asset COMET to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:24:50,504 - src.core - WARNING - NaN amount detected for asset SigUSD to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:24:50,504 - src.core - WARNING - NaN amount detected for asset rsBTC to miner 9hAcdWpFAv7biCSeUcCvXWYRfEepm1ubdsfg5PC48k9S7ymiU3W. Skipping this record.
+2024-08-08 09:24:50,504 - src.core - WARNING - NaN amount detected for asset Bober to miner 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk. Skipping this record.
+2024-08-08 09:24:50,512 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:24:50,521 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:24:50,529 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:24:50,536 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:24:50,544 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:24:50,551 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:24:50,558 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:24:50,566 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:24:50,573 - src.core - INFO - Inserted payment record for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk
+2024-08-08 09:24:50,580 - src.core - INFO - Updated balance for 9ehJZvPDgvCNNd2zTQHxnSpcCAtb1kHbEN1VAgeoRD5DPVApYkk to 0
+2024-08-08 09:24:50,581 - src.core - INFO - Payment execution completed successfully
